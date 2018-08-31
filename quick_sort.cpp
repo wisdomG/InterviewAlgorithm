@@ -3,7 +3,8 @@
 #include <random>
 using namespace std;
 
-void quick_sort(vector<int> &arr, int l, int r) {
+// 3路快排序
+void quick_sort3(vector<int> &arr, int l, int r) {
     if (r <= l) return ;
     int tar = arr[l];
     int lp = l, rp = r + 1;
@@ -21,8 +22,8 @@ void quick_sort(vector<int> &arr, int l, int r) {
         }
     }
     swap(arr[l], arr[lp]);
-    quick_sort(arr, l, lp-1);
-    quick_sort(arr, rp, r);
+    quick_sort3(arr, l, lp-1);
+    quick_sort3(arr, rp, r);
 }
 
 const int LEN = 20;
@@ -36,7 +37,7 @@ int main() {
         cout << ele << ' ';
     }
     cout << endl;
-    quick_sort(arr, 0, LEN-1);
+    quick_sort3(arr, 0, LEN-1);
     for (auto &ele : arr)
         cout << ele << ' ';
     cout << endl;
