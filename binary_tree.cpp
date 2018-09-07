@@ -26,7 +26,7 @@ void pre_order(TreeNode *root) {
 void pre_order2(TreeNode* root) {
     stack<TreeNode*> sta;
     TreeNode* cur = root;
-    while (cur != nullptr && !sta.empty()) {
+    while (cur != nullptr || !sta.empty()) {
         if (cur != nullptr) {
             sta.push(cur);
             cout << cur -> val << endl;
@@ -56,7 +56,7 @@ void in_order(TreeNode* root) {
 void in_order2(TreeNode* root) {
     stack<TreeNode*> sta;
     TreeNode* cur = root;
-    while (cur != nullptr && !sta.empty()) {
+    while (cur != nullptr || !sta.empty()) {
         if (cur != nullptr) {
             sta.push(cur);
             cur = cur -> left;
@@ -72,7 +72,7 @@ void post_order(TreeNode* root) {
     stack<TreeNode*> sta;
     TreeNode* cur = root;
     TreeNode* pre = nullptr;
-    while (cur != nullptr && !sta.empty()) {
+    while (cur != nullptr || !sta.empty()) {
         if (cur != nullptr) {
             sta.push(cur);
             cur = cur -> left;
