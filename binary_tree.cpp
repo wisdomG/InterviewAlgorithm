@@ -82,7 +82,7 @@ void post_order(TreeNode* root) {
                 cur = top -> right;
             } else {
                 cout << top -> val << endl;
-                pre = cur;
+                pre = top;
                 sta.pop();
             }
         }
