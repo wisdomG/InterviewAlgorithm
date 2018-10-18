@@ -33,6 +33,7 @@ void pre_order2(TreeNode* root) {
             cur = cur -> left;
         } else {
             TreeNode* top = sta.top();
+            sta.pop();
             cur = top -> right; 
         }
     }
@@ -62,6 +63,7 @@ void in_order2(TreeNode* root) {
             cur = cur -> left;
         } else {
             TreeNode* top = sta.top();
+            sta.pop();
             cout << cur -> val << endl;
             cur = top -> right; 
         }
