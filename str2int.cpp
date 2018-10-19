@@ -2,6 +2,9 @@
 #include <string>
 using namespace std;
 
+const int INT_MAX = 0x7fffffff;
+
+
 int str2int(string str) {
     int sz = str.size();
     long long res = 0;
@@ -10,7 +13,7 @@ int str2int(string str) {
         flag = 1;
         ++i;
     } else if (str[0] == '-') {
-        flag == -1;
+        flag = -1;
         ++i;
     }
     for (; i < sz; ++i) {
